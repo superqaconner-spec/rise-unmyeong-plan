@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c1226">
+  <meta name="description" content="Rise 운명의 사주 앱 경쟁 분석과 우선순위별 제품 개선 계획. 2026년 10월 11일 기준.">
+  <title>Rise 운명 · 경쟁 분석과 개선 계획</title>
+  <style>
+    :root { --bg:#0c1226; --panel:#151c38; --panel2:#1d2748; --line:#354164; --text:#f0eef8; --muted:#b8b5d1; --soft:#9492b3; --gold:#e4c37e; --mint:#8ed8bc; --blue:#9dc6f5; --rose:#f4b5ba; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(circle at 75% -5%,#27335d 0,transparent 33rem),var(--bg); color:var(--text); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .top { border-bottom:1px solid var(--line); background:#0c1226d9; }
+    .top .wrap { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:68px; }
+    .brand { color:var(--gold); font-family:Georgia,"AppleMyungjo",serif; font-size:21px; letter-spacing:.03em; text-decoration:none; white-space:nowrap; }
+    .top nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px 20px; }
+    .top nav a { color:var(--muted); text-decoration:none; font-size:13px; }
+    .top nav a:hover { color:var(--text); }
+    .hero { padding:88px 0 68px; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr); gap:36px; align-items:center; }
+    .eyebrow { color:var(--gold); font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { line-height:1.35; word-break:keep-all; }
+    h1 { font-family:Georgia,"AppleMyungjo",serif; font-size:clamp(36px,5vw,64px); letter-spacing:-.04em; margin:15px 0 24px; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .lead { max-width:680px; color:#d2d1e2; font-size:19px; line-height:1.8; word-break:keep-all; }
+    .date { color:var(--soft); font-size:13px; margin-top:27px; }
+    .thesis { padding:28px; border:1px solid #84704d; border-radius:24px; background:linear-gradient(145deg,#273051,#171e39); box-shadow:0 18px 50px #0003; }
+    .thesis .mark { font:48px Georgia,serif; color:var(--gold); line-height:1; }
+    .thesis strong { display:block; font-size:22px; line-height:1.5; margin:12px 0; word-break:keep-all; }
+    .thesis p { color:var(--muted); margin:0; font-size:14px; }
+    section { padding:56px 0; border-top:1px solid var(--line); scroll-margin-top:25px; }
+    h2 { font-size:clamp(28px,3vw,38px); margin:8px 0 13px; letter-spacing:-.035em; }
+    .intro { color:var(--muted); max-width:760px; margin-bottom:29px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { background:linear-gradient(155deg,var(--panel2),var(--panel)); border:1px solid var(--line); border-radius:20px; padding:24px; min-width:0; }
+    .card h3 { font-size:20px; margin-bottom:8px; }
+    .card p { color:var(--muted); margin-bottom:0; }
+    .card .source { margin-top:18px; font-size:12px; color:var(--soft); }
+    .card .source a,.sources a { color:var(--blue); text-underline-offset:3px; }
+    .card .advantage { color:var(--mint); font-weight:700; margin-top:12px; }
+    .tag { display:inline-block; padding:4px 9px; border-radius:999px; background:#314367; color:#d5e7ff; font-size:11px; font-weight:800; letter-spacing:.04em; }
+    .tag.gold { background:#51452f; color:#ffe4a6; }
+    .tag.rose { background:#573b4b; color:#ffd1d5; }
+    .strengths { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .number { color:var(--gold); font:32px Georgia,serif; }
+    .strengths h3 { margin:8px 0; }
+    .priority { display:grid; grid-template-columns:100px minmax(0,1fr); gap:16px; padding:24px 0; border-bottom:1px solid var(--line); }
+    .priority:last-child { border-bottom:0; }
+    .priority h3 { margin:0 0 8px; font-size:21px; }
+    .priority p { margin:0 0 10px; color:var(--muted); }
+    .priority .proof { font-size:13px; color:var(--mint); }
+    .phase { display:grid; grid-template-columns:150px minmax(0,1fr); gap:20px; padding:25px; margin:14px 0; border:1px solid var(--line); border-radius:20px; background:var(--panel); }
+    .phase .when { color:var(--gold); font-weight:800; }
+    .phase h3 { margin-bottom:8px; }
+    ul { margin:0; padding-left:20px; }
+    li { padding-left:3px; margin:5px 0; }
+    .phase li { color:var(--muted); }
+    .measure { overflow-x:auto; border:1px solid var(--line); border-radius:17px; }
+    table { border-collapse:collapse; width:100%; min-width:680px; }
+    th,td { padding:15px 18px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#202a4c; color:var(--gold); font-size:13px; }
+    td { color:var(--muted); }
+    tr:last-child td { border-bottom:0; }
+    .note { border-left:3px solid var(--gold); padding:10px 20px; margin-top:24px; background:#e4c37e10; color:var(--muted); }
+    .sources { color:var(--muted); }
+    .sources li { margin:8px 0; }
+    footer { padding:36px 0 60px; color:var(--soft); font-size:12px; border-top:1px solid var(--line); }
+    @media (max-width:760px) { .wrap{width:min(100% - 28px,1120px)} .top .wrap{align-items:flex-start; flex-direction:column; padding:15px 0} .top nav{justify-content:flex-start} .hero{grid-template-columns:1fr; padding:56px 0 48px} .grid,.strengths{grid-template-columns:1fr} .priority{grid-template-columns:1fr;gap:9px} .phase{grid-template-columns:1fr;gap:5px} section{padding:43px 0} }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap">
+    <a class="brand" href="#top">Rise 운명</a>
+    <nav aria-label="페이지 목차"><a href="#position">포지셔닝</a><a href="#compare">경쟁 비교</a><a href="#strength">강점</a><a href="#issues">개선 과제</a><a href="#roadmap">실행 계획</a><a href="#metrics">측정</a></nav>
+  </div></header>
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div><div class="eyebrow">Product strategy · 2026.10.11</div><h1>내 사주가<br><em>한 장의 카드가 된다</em></h1><p class="lead">Rise 운명의 경쟁력은 운세 종류의 개수가 아니라, 나의 해석이 카드가 되고 그 카드가 사람과 관계를 잇는 경험에 있다.</p><p class="date">분석 범위: 공개 웹 화면·현재 저장소 코드·경쟁 서비스 공식 소개. 실제 사용자 성과와 결제 전환은 아직 측정 전.</p></div>
+      <aside class="thesis"><div class="mark">命</div><strong>카드 → 공유 → 사람 추가 → 관계 확인 → 도감 수집</strong><p>이 흐름을 첫 방문에도 이해하고 끝까지 경험하게 만드는 것이 다음 제품 단계다.</p></aside>
+    </div>
+
+    <section id="position"><div class="eyebrow">01 · Position</div><h2>승부할 자리를 좁고 선명하게</h2><p class="intro">포스텔러와 점신은 풍부한 운세 콘텐츠, 사주핑은 상황을 기억하는 대화, 천명은 전문가 상담을 내세운다. Rise 운명은 같은 기능을 모두 따라가기보다 <strong>소유하고 공유하는 사주 아이덴티티</strong>를 깊게 만들어야 한다.</p><div class="card"><span class="tag gold">권장 포지셔닝</span><h3 style="margin-top:14px">“나를 설명하는 운명카드를 만들고, 내 사람들과의 관계를 읽는다.”</h3><p>‘궁합을 제공한다’는 차별점이 아니다. 점신은 인맥 보고서를, 사주핑은 다인 궁합을 이미 소개한다. 카드가 사람을 모으고 도감을 채우는 연결 방식이 Rise 운명의 고유한 경험이다.</p></div></section>
+
+    <section id="compare"><div class="eyebrow">02 · Landscape</div><h2>기존 사주 앱과 비교</h2><p class="intro">아래 내용은 각 서비스의 공식 앱 소개 또는 FAQ에 적힌 제공 범위를 기준으로 한다. 풀이 정확도와 실제 사용 만족도는 비교 실험을 하지 않았다.</p><div class="grid">
+      <article class="card"><span class="tag">콘텐츠형</span><h3 style="margin-top:12px">포스텔러</h3><p>사주·타로·점성술·주역 등 장르와 운세 캘린더의 폭이 강하다. Rise 운명은 콘텐츠 수로 경쟁하기보다 한 번 만든 카드가 지속되는 경험으로 구분해야 한다.</p><p class="advantage">Rise 기회: 기억되고 공유되는 고유 카드</p><p class="source"><a href="https://play.google.com/store/apps/details?id=com.un7qi3.forceteller&amp;hl=ko">Google Play 공식 소개 ↗</a></p></article>
+      <article class="card"><span class="tag">종합형</span><h3 style="margin-top:12px">점신</h3><p>무료 일일 운세, 인맥 궁합, 전문가 상담, 보상까지 제공한다. 관계와 리워드는 이미 경쟁 영역이므로 Rise는 카드 수집과 관계 지도의 연결 품질을 높여야 한다.</p><p class="advantage">Rise 기회: 일관된 카드·관계 세계관</p><p class="source"><a href="https://play.google.com/store/apps/details?id=handasoft.mobile.divination&amp;hl=ko">Google Play 공식 소개 ↗</a></p></article>
+      <article class="card"><span class="tag">대화형</span><h3 style="margin-top:12px">사주핑</h3><p>상황과 이전 대화를 기억하는 AI 해석, 친구·가족·동료 및 다인 궁합을 설명한다. Rise는 질문을 하지 않아도 바로 읽히는 카드와 시각적 관계 결과가 강점이다.</p><p class="advantage">Rise 기회: 즉시 이해되는 결과물</p><p class="source"><a href="https://www.sajuping.ai/faq">공식 FAQ ↗</a></p></article>
+      <article class="card"><span class="tag">상담형</span><h3 style="margin-top:12px">천명</h3><p>전문가 전화·채팅·방문 상담과 후기를 중심으로 신뢰를 구축한다. Rise는 반복 방문과 가벼운 관계 탐색에 초점을 맞추는 편이 적합하다.</p><p class="advantage">Rise 기회: 매일 쓰고 친구와 함께 보는 경험</p><p class="source"><a href="https://play.google.com/store/apps/details?id=com.chunmyung.chunmyungapp&amp;hl=ko">Google Play 공식 소개 ↗</a></p></article>
+    </div></section>
+
+    <section id="strength"><div class="eyebrow">03 · What works</div><h2>지금 강력한 세 가지</h2><div class="strengths">
+      <article class="card"><div class="number">01</div><h3>소유 가능한 결과</h3><p>4자리 코드·오행·등급·기세가 한 장의 카드로 묶인다. 공개 웹에는 카드 보내기와 이미지 저장이 있다.</p></article>
+      <article class="card"><div class="number">02</div><h3>연결되는 재방문</h3><p>오늘의 일진과 시진, 내 사람, 100종 도감이 이어진다. 사람을 추가할수록 서비스 안의 결과가 쌓인다.</p></article>
+      <article class="card"><div class="number">03</div><h3>근거를 보여주는 해석</h3><p>일간·오행 관계와 출생정보 보완을 안내한다. 이 방향을 모든 핵심 풀이에 일관되게 적용하면 신뢰 자산이 된다.</p></article>
+    </div></section>
+
+    <section id="issues"><div class="eyebrow">04 · Friction</div><h2>개선 과제와 완료 기준</h2>
+      <div class="priority"><div><span class="tag rose">P0 · 이해</span></div><div><h3>첫 30초에 카드의 가치를 보여주기</h3><p>현재 로그인 홈은 일진·시진이 앞선다. 신규 사용자는 카드 완성, 공유, 관계 추가를 왜 하는지 바로 이해해야 한다.</p><div class="proof">완료 기준: 신규 사용자 테스트에서 5명 중 4명이 첫 화면의 다음 행동을 설명하고, 카드 생성까지 완료</div></div></div>
+      <div class="priority"><div><span class="tag rose">P0 · 신뢰</span></div><div><h3>작은 글씨·용어·수치의 뜻 정리</h3><p>카드 앞면의 핵심 세 가지만 남기고 세부 근거는 펼쳐 보게 한다. ‘기세·시진·편관·관성·緣’은 첫 등장에 쉬운 말을 붙인다. ‘적중률’과 ‘N명 중 1명’은 계산 범위를 명시한다.</p><div class="proof">완료 기준: 390px 화면에서 카드 핵심 문구를 확대 없이 읽고, 수치의 의미를 도움말 없이 이해</div></div></div>
+      <div class="priority"><div><span class="tag gold">P1 · 깊이</span></div><div><h3>유형 문구에서 내 명식 근거로</h3><p>현재 ‘나는 어떤 사람인가’는 4자리 코드의 설명을 조합한다. 관계·일·시기별 풀이에 사용자의 명식 요소와 그 요소가 만든 결론을 함께 제시한다.</p><div class="proof">완료 기준: 풀이 3개를 읽은 사용자가 ‘왜 이런 해석인지’ 근거를 각각 짚을 수 있음</div></div></div>
+      <div class="priority"><div><span class="tag gold">P1 · 관계</span></div><div><h3>첫 사람 추가의 마찰 줄이기</h3><p>빈 관계 화면에서 가족·친구·동료 중 한 명을 추가하도록 돕고, 추가 직후 카드·관계 해석·도감 보상이 한 번에 보이게 한다.</p><div class="proof">완료 기준: 카드 생성자 중 첫 사람 추가율과 추가 후 7일 재방문율이 기준선보다 개선</div></div></div>
+      <div class="priority"><div><span class="tag">P2 · 사업성</span></div><div><h3>결제 의사와 복원 경험 검증</h3><p>현재 가격은 표시되지만 결제 요청은 준비 중 상태다. 유료 풀이의 미리보기 가치, 실제 결제, 영수증 검증, 기기 간 복원을 순서대로 준비한다.</p><div class="proof">완료 기준: 결제 성공·취소·실패·복원 경로가 검증된 뒤 소규모 유료 실험 진행</div></div></div>
+    </section>
+
+    <section id="roadmap"><div class="eyebrow">05 · Roadmap</div><h2>10주 실행 계획</h2><p class="intro">기간은 제안이다. 각 단계의 사용자 검증 결과에 따라 다음 단계 범위를 조정한다.</p>
+      <article class="phase"><div class="when">1–2주<br><span class="tag rose">첫 경험</span></div><div><h3>카드까지 가는 길 정리</h3><ul><li>신규·재방문 8명에게 첫 화면, 생성, 카드 이해도 관찰</li><li>카드 첫 화면의 유형·한 줄 해석·관계 힌트 재배치</li><li>핵심 용어와 수치의 근거 문구 통일</li><li>생성 시작·완료·공유·첫 사람 추가 이벤트 계측</li></ul></div></article>
+      <article class="phase"><div class="when">3–6주<br><span class="tag gold">관계 루프</span></div><div><h3>첫 사람에서 도감까지 연결</h3><ul><li>관계 빈 화면과 추가 절차 단축</li><li>사람 추가 직후 궁합 한 줄·근거·도감 획득을 한 흐름으로 표시</li><li>공유된 카드로 들어온 사람의 카드 생성 동선 설계</li><li>명식 근거가 드러나는 관계·일 풀이부터 콘텐츠 보강</li></ul></div></article>
+      <article class="phase"><div class="when">7–10주<br><span class="tag">유료 검증</span></div><div><h3>가치가 확인된 해석만 판매</h3><ul><li>미리보기별 열람과 결제 의사 조사</li><li>웹 결제·앱 인앱결제·영수증 검증·복원 경로 구현 및 테스트</li><li>작은 사용자군에서 가격·풀이 만족도·환불 사유 측정</li><li>유료 풀이가 무료 카드·관계 경험을 가리지 않는지 확인</li></ul></div></article>
+      <div class="note">다음 단계로 넘어갈 조건: 첫 카드 완성과 첫 관계 추가가 실제로 개선되고, 풀이 근거에 대한 이해가 확인될 것. 이 조건이 충족되지 않으면 콘텐츠 종류와 상점 상품을 늘리지 않는다.</div>
+    </section>
+
+    <section id="metrics"><div class="eyebrow">06 · Measurement</div><h2>무엇을 보면 좋아졌다고 할까</h2><div class="measure"><table><thead><tr><th>지표</th><th>정의</th><th>용도</th></tr></thead><tbody>
+      <tr><td>첫 카드 완성률</td><td>카드 생성 완료 사용자 ÷ 생성 시작 사용자</td><td>입력과 리빌 과정의 마찰 확인</td></tr>
+      <tr><td>첫 공유율</td><td>카드 공유 완료 사용자 ÷ 카드 완성 사용자</td><td>카드가 보여주고 싶은 결과인지 확인</td></tr>
+      <tr><td>첫 사람 추가율</td><td>7일 내 사람을 1명 이상 추가한 사용자 ÷ 카드 완성 사용자</td><td>카드에서 관계로 넘어가는 힘 확인</td></tr>
+      <tr><td>관계 후 7일 재방문율</td><td>첫 사람 추가 후 7일째 방문 사용자 ÷ 첫 사람 추가 사용자</td><td>관계 기능의 반복 가치 확인</td></tr>
+      <tr><td>풀이 이해도</td><td>사용자 테스트에서 결과와 근거를 자기 말로 설명한 비율</td><td>문구·용어·근거 표현의 품질 확인</td></tr>
+      <tr><td>유료 풀이 만족도</td><td>구매자 후속 평가와 환불·불만 사유</td><td>결제액보다 실제 해석 가치 우선 검증</td></tr>
+    </tbody></table></div><p class="note">현재 지표의 실측 기준선은 없다. 첫 2주에 계측과 인터뷰를 먼저 진행하고, 목표 수치는 기준선을 본 뒤 정한다.</p></section>
+
+    <section id="sources"><div class="eyebrow">07 · Evidence</div><h2>출처와 해석 범위</h2><ul class="sources"><li><a href="https://web-puce-ten-23.vercel.app/">Rise 운명 공개 웹</a>: 2026-10-11에 홈·내 카드·관계·도감·프리미엄 화면 확인. 계정 상태에 따라 화면은 다를 수 있다.</li><li><a href="https://github.com/superqaconner-spec/D-type/blob/main/web/lib/reading.ts">운명 풀이 코드</a>: 유형 본문의 생성 방식.</li><li><a href="https://github.com/superqaconner-spec/D-type/blob/main/web/lib/daeun.ts">과거 검증 코드</a>와 <a href="https://github.com/superqaconner-spec/D-type/blob/main/web/lib/code-rarity.ts">희소성 산출 데이터</a>: 수치의 의미 확인. 저장소는 비공개이므로 권한이 있는 사용자만 열 수 있다.</li><li><a href="https://github.com/superqaconner-spec/D-type/blob/main/web/lib/purchases.ts">결제 코드</a>: 2026-10-11 기준 실제 결제 요청은 준비 중 상태.</li><li>경쟁 비교는 위 네 서비스의 공식 Google Play 소개 및 사주핑 공식 FAQ를 사용했다. 경쟁 서비스의 전체 유료 화면·실제 풀이 품질은 검증하지 않았다.</li></ul></section>
+  </main>
+  <footer><div class="wrap">Rise 운명 · 경쟁 분석과 개선 계획 · 2026-10-11<br>이 페이지의 기간과 성공 기준은 실행을 위한 가설이며, 사용자 데이터가 쌓이면 갱신한다.</div></footer>
+</body>
+</html>
