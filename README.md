@@ -1,6 +1,7 @@
 # Rise 운명 · 경쟁 분석과 개선 계획
 
 2026년 10월 11일 기준의 경쟁 비교와 10주 제품 개선 계획을 담은 정적 웹페이지입니다.
+2026년 10월 12일 기준 앱 PR #4·#5의 진행 현황을 추가했습니다. 두 PR은 검토 중이며 사용자 성과는 아직 측정 전입니다.
 
 - 웹페이지: https://superqaconner-spec.github.io/rise-unmyeong-plan/
 - 원본: [index.html](./index.html)
