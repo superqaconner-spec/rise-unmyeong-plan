@@ -108,7 +108,7 @@
       <div class="priority"><div><span class="tag">P2 · 사업성</span></div><div><h3>결제 의사와 복원 경험 검증</h3><p>현재 가격은 표시되지만 결제 요청은 준비 중 상태다. 유료 풀이의 미리보기 가치, 실제 결제, 영수증 검증, 기기 간 복원을 순서대로 준비한다.</p><div class="proof">완료 기준: 결제 성공·취소·실패·복원 경로가 검증된 뒤 소규모 유료 실험 진행</div></div></div>
     </section>
 
-    <section id="progress"><div class="eyebrow">05 · Progress · 2026.10.14</div><h2>개선 작업 진행 현황</h2><p class="intro">아래 변경은 구현 후 PR로 제출한 상태다. 검증 범위는 각 항목에 적었다. 운영 반영과 사용자 성과 개선은 아직 확인하지 않았다.</p>
+    <section id="progress"><div class="eyebrow">05 · Progress · 2026.10.15</div><h2>개선 작업 진행 현황</h2><p class="intro">아래 변경은 구현 후 PR로 제출한 상태다. 검증 범위는 각 항목에 적었다. 운영 반영과 사용자 성과 개선은 아직 확인하지 않았다.</p>
       <div class="grid">
         <article class="card"><span class="tag rose">P0 · 검토 중</span><h3 style="margin-top:14px">첫 카드와 수치 설명</h3><p>첫 방문 동선을 간결하게 만들고 카드 자동 축소를 제거했다. 기세·희귀도·과거 응답 비율의 뜻을 웹과 모바일에서 맞췄다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/4">앱 PR #4 · 저장소 권한 필요 ↗</a></p></article>
         <article class="card"><span class="tag gold">P1 · 검토 중</span><h3 style="margin-top:14px">첫 사람 연결</h3><p>빈 관계 화면의 추가 버튼을 위로 옮기고, 추가 직후 관계 한 줄·상세 보기·도감 보기로 이어지게 했다. PR #4를 먼저 반영해야 한다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/5">앱 PR #5 · 저장소 권한 필요 ↗</a></p></article>
@@ -116,6 +116,7 @@
         <article class="card"><span class="tag gold">P1 · 검토 중</span><h3 style="margin-top:14px">풀이 근거의 첫 단계</h3><p>유형 문장을 만든 네 기준과 출생정보의 오행 분포를 구분해 표시한다. 명식 수치가 실제로 반영되는 길흉 풀이도 안내한다. 관계 힌트 연결은 PR #8에서 이어진다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/7">앱 PR #7 · 저장소 권한 필요 ↗</a></p></article>
         <article class="card"><span class="tag gold">P1 · 검토 중</span><h3 style="margin-top:14px">명식 분포와 관계 힌트 연결</h3><p>나를 돕는 기운의 글자 수와 절반 기준을 보이고, 같은 관계 판정에서 나온 가까이할·맞춰 갈 기운을 카드·길흉 풀이와 연결했다. 오행 분포가 없는 카드에는 개인화 근거를 만들지 않는다. PR #7 다음 순서다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/8">앱 PR #8 · 저장소 권한 필요 ↗</a></p></article>
         <article class="card"><span class="tag gold">P1 · 검토 중</span><h3 style="margin-top:14px">대운 ‘일’ 풀이의 계산 근거</h3><p>현재 대운의 일 문장 아래에 지지·일간 관계, 시작 나이, 지지 성격을 표시한다. 천간이 일 문장에 반영될 때만 근거에 넣는다. 합성 프로필로 웹 390px 화면과 최신 iOS 시뮬레이터 화면을 확인했고 문구 잘림·가로 넘침은 없었다. 실기기 화면과 사용자 이해도는 미검증이다. PR #8 다음 순서다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/9">앱 PR #9 · 저장소 권한 필요 ↗</a></p></article>
+        <article class="card"><span class="tag gold">P1 · 검토 중</span><h3 style="margin-top:14px">대운 ‘관계’ 풀이의 계산 근거</h3><p>관계 문장에 사용된 지지·일간 관계, 시작 나이, 지지 성격을 표시하고, 천간이 반영된 경우에만 추가한다. 상대 정보 없이 내 사주와 대운으로 읽는 풀이임을 밝힌다. 합성 프로필의 웹 390px·최신 iOS 시뮬레이터 화면에서 확인했다. 실기기·사용자 이해도는 미검증이며 PR #9 다음 순서다.</p><p class="source"><a href="https://github.com/superqaconner-spec/D-type/pull/10">앱 PR #10 · 저장소 권한 필요 ↗</a></p></article>
       </div>
       <div class="note">다음 검증: 실기기 대운 화면과 풀이 근거 이해도, 신규 사용자 첫 카드 완성·첫 사람 추가 행동, 공유·추가·재방문 기준선 계측. 현재 전환율은 측정 전이다.</div>
     </section>
